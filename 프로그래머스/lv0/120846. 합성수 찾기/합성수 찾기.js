@@ -1,17 +1,27 @@
-function solution(n) {
-    let count = 0
-    for(let i = 1 ; i <= n; i ++) {
-        isMixNumber(i) ? count++ : null
-    }
-    return count
-}
 
-// 합성수인지 판별하는 함수
-function isMixNumber(num) {
-    let count = 0
-    // 약수의 개수를 셈
-    for(let i = 1 ; i <= (num/2)<<0 ; i ++) {
-        num%i === 0 ? count++ : null
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+function solution(n) {
+    var answer = 0;
+    for(let i = 4; i <= n; i++){
+        for(let j = 2; j < i; j++){
+            if(i % j === 0){
+                answer += 1;
+                break;
+            }
+        }
     }
-    return count >= 2 ? true : false
+
+    return answer;
 }
