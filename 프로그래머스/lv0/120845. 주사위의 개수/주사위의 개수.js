@@ -1,10 +1,7 @@
 function solution(box, n) {
-    let width = parseInt(box[0] / n)
-    let height = parseInt(box[1] / n)
-    let length = parseInt(box[2] / n)
-    
-    return width * height * length
+    let sum = box.map(el => Math.floor(el / n))
+    return sum[0] * sum[1] * sum[2]
 }
 
-// 박스의 가로 세로 높이가 n의 배수여야 딱 맞는다.
-// 아니면 나머지를 버린다.
+// Math.floor(box[0,1,2] / n)
+// 나머지 몫들을 다 곱해준다.
