@@ -1,9 +1,10 @@
 function solution(s){
-    s = s.toLowerCase().split("")
-    let p = s.filter(el => el === "p").length
-    let y = s.filter(el => el === "y").length
-    return p === y || (p < 1 && y < 1) ? true : false
+    let P = 0
+    let Y = 0
+    let UpperCase = s.toUpperCase()
+    for (let i = 0; i<=s.length; i++) {
+    if (UpperCase[i] === "P") P += 1
+    else if (s.toUpperCase()[i] === "Y") Y += 1
+    }
+    return P === Y ? true : false
 }
-
-// 반복문으로 p와 y의 개수를 파악한다.
-// p,y가 한개도 없거나 같으면 true 아니라면 false 반환
