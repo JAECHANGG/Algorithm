@@ -1,6 +1,3 @@
 function solution(n) {
-    n = n.toString().split("").sort((a, b) => b-a).join("")
-    return Number(n)
+    return Number(n.toString().split("").sort((a,b) => b-a).join(""))
 }
-
-// sort 내림차순 정렬
