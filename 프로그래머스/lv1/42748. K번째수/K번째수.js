@@ -1,8 +1,5 @@
 function solution(array, commands) {
-    let answer = []
-    for(let a = 0; a<commands.length; a++) {
-        const [i, j, k] = commands[a]
-        answer.push(array.slice(i-1, j).sort((a,b) => a-b)[k-1])
-    }
-    return answer
+    return commands.map(v => {
+        return array.slice(v[0] - 1, v[1]).sort((a, b) => a - b)[v[2]-1];
+    });
 }
