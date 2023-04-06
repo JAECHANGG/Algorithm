@@ -1,12 +1,1 @@
-function solution(a, b, n) {
-    let totalGetCola = 0;
-    let nowGetCola = 0;
-    let inputCola = n;
-
-    while (inputCola >= a) {
-        nowGetCola = parseInt(inputCola / a) * b
-        totalGetCola += nowGetCola
-        inputCola = nowGetCola + inputCola % a
-    }
-    return totalGetCola;
-}
+solution = (a, b, n) => Math.floor(Math.max(n - b, 0) / (a - b)) * b
