@@ -1,7 +1,6 @@
 function solution(number, limit, power) {
     var answer = 0;
     let count = 0;
-    let arr = [];
     
     for(let i=1; i<=number; i++) {
         for(let j=1; j<=Math.sqrt(i); j++) {
