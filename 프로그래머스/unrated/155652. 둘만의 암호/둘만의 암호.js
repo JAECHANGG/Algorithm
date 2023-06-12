@@ -7,7 +7,7 @@ function solution(s, skip, index) {
         for(let j=0; j<alphabet.length; j++) {
             if(s[i] === alphabet[j]) {
                 const idx = j+index;
-                answer += idx < alphabet.length ? alphabet[idx] : alphabet[idx % alphabet.length];
+                answer += alphabet[idx % alphabet.length];
             }
         }
     }
