@@ -11,5 +11,6 @@ function solution(score) {
             }
         }
     }
+
     return answer;
 }
